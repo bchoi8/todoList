@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Todos from './components/Todos';
-
+import { bounceIn } from 'react-animations';
+import styled, { keyframes } from 'styled-components';
 
 import AddTodo from './components/AddTodo';
 import './css/base.css';
@@ -54,10 +55,15 @@ class App extends Component {
   };
 
   render() {
+    const Bounce = styled.div`
+      animation: 2s ${keyframes`${bounceIn}`};
+    `;
     return (
       <div>
         <div className='title'>
+          <Bounce>
             <h1 className='headerText'>To Do List</h1>
+          </Bounce>
         </div>
         <AddTodo addTodo={this.addTodo} />
         <Todos
