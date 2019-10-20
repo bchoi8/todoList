@@ -1,0 +1,14 @@
+.formContainer {
+    display: flex;
+}
+
+.addItem {
+    flex: 10;
+    padding: 5px;
+}
+
+.submit {
+    flex: 1;
+    background: #383838;
+    color:white;
+}
